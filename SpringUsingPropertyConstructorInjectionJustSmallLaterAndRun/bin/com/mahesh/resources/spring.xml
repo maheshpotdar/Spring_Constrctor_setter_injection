@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Engine eng=new Engine(); -->
+	<bean id="e1" class="com.mahesh.model.Engine"
+		p:enginemodelyear="2019">
+	</bean>
+
+	<bean id="s1" class="com.mahesh.model.Sheets"
+		c:sheetscompname="Indian Standard" c:sheetsmanuname="IndiaBrand" c:sheetsmanucountry="India">
+	</bean>
+
+	<bean id="t1" class="com.mahesh.model.Tires" p:tirecompname="MRF"
+		p:tireprice="2500">
+	</bean>
+
+	<!-- Car car=new Car(); -->
+	<bean id="c1" class="com.mahesh.model.Car" p:carname="Wagnor"
+		c:carname="Wagnor LXi" c:carprice="2909090" c:carcountry="India"
+		c:tires-ref="t1" c:engine-ref="e1" c:sheets-ref="s1">
+	</bean>
+
+
+
+	<!-- required activate -->
+	<bean
+		class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
+
+</beans>
