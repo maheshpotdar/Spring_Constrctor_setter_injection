@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<!-- Car c1=new Car(String); -->
+	<bean id="c1" class="com.mahesh.model.Car" scope="singleton">
+		<constructor-arg type="java.lang.String">
+			<value>Wagnor LXi</value>
+		</constructor-arg>
+	</bean>
+
+	<!-- TwoWheeler t1=new TwoWheeler(String); -->
+	<bean id="t1" class="com.mahesh.model.TwoWheeler"
+		scope="singleton">
+		<constructor-arg type="java.lang.String">
+			<value>Bajaj Pulsar</value>
+		</constructor-arg>
+	</bean>
+
+	<bean id="e1" class="com.mahesh.model.Employee" scope="singleton">
+		<constructor-arg>
+			<value type="java.lang.String">Mahesh Potdar</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value type="java.lang.String">Khotwadi</value>
+		</constructor-arg>
+		<constructor-arg ref="c1">
+		</constructor-arg>
+		<constructor-arg ref="t1">
+		</constructor-arg>
+	</bean>
+
+</beans>			
