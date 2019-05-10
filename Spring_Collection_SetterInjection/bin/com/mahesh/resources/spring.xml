@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<!-- List By defaut ArrayList. -->
+	<!-- Set By Default LinkedHashSet -->
+	<!--Map Be Default LinkedHashMap -->
+
+	<!-- Country Capital Object -->
+	<bean id="c1" class="com.mahesh.model.CounCap">
+		<property name="counCapital">
+			<map>
+				<entry key="India" value="Delhi"></entry>
+				<entry key="England" value="London"></entry>
+				<entry key="USA" value="California"></entry>
+			</map>
+		</property>
+	</bean>
+
+	<!-- Fruits Object -->
+	<!-- <bean id="ff" class="com.mahesh.model.Fruits"> <property name=""> <list> 
+		</list> </property> </bean> -->
+	<!-- <bean id="ff" class="com.mahesh.model.Fruits"> </bean> <bean id="ff" 
+		class="com.mahesh.model.Fruits"> </bean> -->
+
+	<!-- Cricket Object -->
+	<!-- <bean id="cr" class="com.mahesh.model.Cricket"> </bean> -->
+
+	<!-- List By defaut ArrayList. -->
+	<!-- <bean id="t1" class="com.mahesh.model.Person"> <property name="lstOfFruits"> 
+		<list> <value></value> <value>Peru</value> <value>Amrutha</value> <value>Ananas</value> 
+		<value>Apple</value> <value>Peru</value> <value>Amrutha</value> </list> </property> -->
+
+	<!-- Set By Default LinkedHashSet -->
+	<!-- <property name="setOfCricketers"> <set> <value>Virendra Sehwag</value> 
+		<value>Sachin Tendulkar</value> <value>Gautam Ghambhir</value> <value>Suresh 
+		Raina</value> <value>Virendra Sehwag</value> <value>Sachin Tendulkar</value> 
+		</set> </property> -->
+
+	<!--Map Be Default LinkedHashMap -->
+	<!-- <property name="mapOfCountryCapital"> <map> <entry key="India" value="Delhi"></entry> 
+		<entry key="England" value="London"></entry> <entry key="USA" value="California"></entry> 
+		<entry key="China" value="Benjing"></entry> </map> </property> -->
+
+	<bean id="p1" class="com.mahesh.model.Person">
+		<property name="mapOfCountryCapital">
+			<ref bean="c1" />
+		</property>
+	</bean>
+
+</beans>			
