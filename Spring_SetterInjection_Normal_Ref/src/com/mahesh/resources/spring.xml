@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<bean id="car" class="com.mahesh.model.Car">
+		<property name="carName" value="Renault Duster">
+		</property>
+	</bean>
+	<bean id="twowheel" class="com.mahesh.model.TwoWheeler">
+		<property name="bikeName" value="Suzuki FZ">
+		</property>
+	</bean>
+	<bean id="emp" class="com.mahesh.model.Employee">
+		<property name="empName" value="Raghwendra Patel">
+		</property>
+		<property name="empAddress" value="Kochhi Kerala.">
+		</property>
+		<property name="car" ref="car">
+		</property>
+		<property name="twWheeler" ref="twowheel">
+		</property>
+	</bean>
+
+</beans>			
