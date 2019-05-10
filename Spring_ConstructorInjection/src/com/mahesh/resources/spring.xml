@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<bean id="e1" class="com.mahesh.model.Employee">
+		<!-- Employee e1=new Employee(string,string,float,long); -->
+		<constructor-arg index="0" type="java.lang.String">
+			<value>Mahesh</value>
+		</constructor-arg>
+		<constructor-arg index="2" type="float">
+			<value>78.98f</value>
+		</constructor-arg>
+		<constructor-arg index="3" type="long">
+			<value>8556786756</value>
+		</constructor-arg>
+		<constructor-arg index="1" type="java.lang.String">
+			<value>Patil</value>
+		</constructor-arg>
+		
+	</bean>
+	<!-- Employee e2=new Employee(String address) -->
+	<bean id="e2" class="com.mahesh.model.Employee">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>Khotwadi</value>
+		</constructor-arg>
+	</bean>
+
+	<!-- Employee e3=new Employee(float marks) -->
+	<bean id="e3" class="com.mahesh.model.Employee">
+		<constructor-arg>
+			<value type="float">89.98f</value>
+		</constructor-arg>
+	</bean>
+
+	<!-- Employee e4=new Employee(float f,long l) -->
+	<bean id="e4" class="com.mahesh.model.Employee">
+		<constructor-arg>
+			<value type="float">89.97f</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value type="long">897675645</value>
+		</constructor-arg>
+	</bean>
+
+</beans>			
